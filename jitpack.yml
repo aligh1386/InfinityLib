@@ -1,5 +1,9 @@
 jdk:
   - openjdk21
 
+before_install:
+  - sdk install maven 3.9.6 || true
+  - sdk use maven 3.9.6 || true
+
 install:
   - mvn install -DskipTests -DskipITs
